@@ -572,7 +572,7 @@ class TMSTool:
         # Формируем имя файла
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         filename = f"testcases_export_{project['name']}_{timestamp}.csv"
-        file_path = os.path.join(os.path.expanduser("~/Downloads/tms-tool"), filename)
+        file_path = os.path.join(os.path.expanduser("./"), filename)
         
         # Экспортируем в CSV
         if self.csv_handler.export_to_csv(cases, file_path):
